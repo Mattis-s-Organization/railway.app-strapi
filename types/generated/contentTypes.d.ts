@@ -6,13 +6,14 @@ export interface ApiTicketTicket extends Struct.CollectionTypeSchema {
     singularName: 'ticket';
     pluralName: 'tickets';
     displayName: 'Ticket';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    recognizedText: Schema.Attribute.Blocks;
+    textOCR: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
