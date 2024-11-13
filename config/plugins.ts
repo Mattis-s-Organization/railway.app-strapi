@@ -7,9 +7,7 @@ export default ({ env }) => ({
     upload: {
         config: {
             provider: "local",
-            providerOptions: {
-                sizeLimit: 100000,
-            },
+            sizeLimit: 1_000_000,
         },
     },
 });
